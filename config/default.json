@@ -1,3 +1,5 @@
 {
-  "mongoUri": "mongodb+srv://007kartik:Learn1Uolo@cluster0.oqsc0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://007kartik:Learn1Uolo@cluster0.oqsc0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
+
 }
