@@ -1,5 +1,6 @@
 {
   "mongoUri": "mongodb+srv://007kartik:Learn1Uolo@cluster0.oqsc0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
-
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "2b180edf30dec1d464d3",
+  "githubSecret" : "abb37d9b86d8ec8da1c94b728a93cfc5cb374ac3 "
 }
