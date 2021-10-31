@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    ref: 'users',
   },
   text: {
     type: String,
@@ -41,7 +40,7 @@ const PostSchema = new Schema({
         type: String,
       },
       date: {
-        type: Date.now(),
+        type: Date,
         default: Date.now,
       },
     },
