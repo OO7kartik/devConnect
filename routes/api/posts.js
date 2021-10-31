@@ -73,4 +73,33 @@ router.get('/:id', auth, async (req, res) => {
   }
 });
 
+// @route   DELETE post
+// @desc    delete a post
+// @access  private
+router.delete('/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    // if post doesnt exists
+    if (!post) {
+      return res.status(404).json({ msg: 'No post found' });
+    }
+
+    //check if user owns this post
+    if (post.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: 'Not Authorized' });
+    }
+
+    await post.remove();
+
+    res.json({ msg: 'post removed' });
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind == 'ObjectId') {
+      return res.status(404).json({ msg: 'No post found' });
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
