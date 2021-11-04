@@ -11,7 +11,6 @@ const User = require('../../models/User');
 // @route   POST api/users
 // @desc    Register route
 // @access  Public
-
 router.post(
   '/',
   [
@@ -30,6 +29,7 @@ router.post(
     const { name, email, password } = req.body;
 
     try {
+      // check if email already exists
       let user = await User.findOne({ email });
       if (user) {
         return res
