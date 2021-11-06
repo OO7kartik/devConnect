@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <nav className='navbar bg-dark'>
       <h1>
@@ -10,13 +10,13 @@ export const Navbar = () => {
       </h1>
       <ul>
         <li>
-          <a href='profiles.html'>Developers</a>
+          <a href='profiles'>Developers</a>
         </li>
         <li>
-          <a href='register.html'>Register</a>
+          <a href='register'>Register</a>
         </li>
         <li>
-          <a href='login.html'>Login</a>
+          <a href='login'>Login</a>
         </li>
       </ul>
     </nav>

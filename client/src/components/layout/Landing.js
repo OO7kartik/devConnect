@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Landing = () => {
+const Landing = () => {
   return (
     <section className='landing'>
       <div className='dark-overlay'>
@@ -11,10 +11,10 @@ export const Landing = () => {
             other developers
           </p>
           <div className='buttons'>
-            <a href='register.html' className='btn btn-primary'>
+            <a href='register' className='btn btn-primary'>
               Sign Up
             </a>
-            <a href='login.html' className='btn btn-light'>
+            <a href='login' className='btn btn-light'>
               Login
             </a>
           </div>
