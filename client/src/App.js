@@ -30,15 +30,4 @@ const App = () => (
   </Provider>
 );
 
-// const App = () => (
-//   <Router>
-//     <Fragment>
-//       <Navbar />
-//       <Switch>
-//         <Route exact path='/' component={Landing} />
-//       </Switch>
-//     </Fragment>
-//   </Router>
-// );
-
 export default App;
