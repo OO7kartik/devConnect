@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -7,7 +8,9 @@ const app = express();
 connectDB();
 
 // Init middleware
-app.use(express.json({ extended: false }));
+// app.use(express.json());
+app.use(bodyParser.json()); // handle json data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.send('API running'));
 
@@ -17,8 +20,8 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`listening on port: ${PORT}`)
+  console.log(`listening on port: ${PORT}`);
 });
